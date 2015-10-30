@@ -62,24 +62,9 @@ Update cert files locations:
 You need three certs: AWS root can be downloaded from https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem
 Rename it to root-CA.cert
 Edit and update aws_iot_config.h file with your IOT information and certificate names
-// Copy and paste your configuration into this file
-//===============================================================
-#define AWS_IOT_MQTT_HOST "XXXXXXXX.iot.us-west-2.amazonaws.com"
-// your endpoint
-#define AWS_IOT_MQTT_PORT 8883
-// your port
-#define AWS_IOT_CLIENT_ID      "myYun"
-// your client ID
-#define AWS_IOT_MY_THING_NAME "myYun"
-// your thing name
-#define AWS_IOT_ROOT_CA_FILENAME "root-CA.crt"
-// your root-CA filename
-#define AWS_IOT_CERTIFICATE_FILENAME "mything.pem.crt"
-// your certificate filename
-#define AWS_IOT_PRIVATE_KEY_FILENAME "mything.pem.key"
-// your private key filename
-//===============================================================
-thing and topic name, in this project Topic name is Topic1 but you can create your own Thing and then topic to trigger Lambda function, SNS, S3 etc.
+
+In this project Topic name is My_Board but you can create your own Thing and then topic to trigger Lambda function, SNS, S3 etc.
+You can create AWS IoT thing using https://aws.amazon.com/iot/ or using AWS CLI 
 
 My apologies, the instructions are bit rough, I did not have much free time for this project. I just wanted to show how easy it is to use AWS IoT with Ardunio Yun and create amazing IoT projects.
 Please let me know if you have any questions.
